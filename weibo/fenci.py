@@ -13,11 +13,13 @@ import os
 cwd=os.getcwd() #
 
 #原始文件
-originalfile = cwd +  "/inputfile/" + "bjlhdx2.csv"
+originalfile = cwd +  "/inputfile/" + "bjlhdx.csv"
 #停用词
 stopfile = cwd + "/dict/" + "stopwords.txt"
+#自定义词库
+userdict =  cwd + "/dict/" + "userdict.txt"
 #分词结果
-fenciresult = cwd + "/resultfile/" + "buu0503fenci2.txt"
+fenciresult = cwd + "/resultfile/" + "buu0503fenci.txt"
 #停用词分割符号
 stopwordsseparator = ","
 
@@ -34,6 +36,7 @@ try:
     wf1 = open(fenciresult, 'w+')
     inputs = open(originalfile, 'r')
     stopwords = stopwordslist(stopfile)  # 这里加载停用到stopwords
+    jieba.load_userdict(userdict)  # 这里加载自定义词库
     for line in inputs:
         item = line.strip('\n\r').strip('\n').strip().split('\t') # 制表格切分
         tags1 = list(jieba.cut(item[0].strip()))
