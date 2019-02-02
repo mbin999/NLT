@@ -15,7 +15,7 @@ originalfile = cwd + "/inputfile/" + "buu0503fenci2.txt"
 #停用词
 stopfile = cwd + "/dict/" + "stopwords.txt"
 #结果
-cipinresult = cwd + "/resultfile/" + "buucipin2.txt"
+cipinresult = cwd + "/resultfile/" + "buucipin.txt"
 #分词分割符号
 fenciseparator = "/"
 #分割符号

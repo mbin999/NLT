@@ -13,7 +13,7 @@ import os
 cwd=os.getcwd() #
 
 #原始文件
-originalfile = cwd +  "/inputfile/" + "bjlhdx.csv"
+originalfile = cwd +  "/inputfile/" + "bjlhdx2.csv"
 #停用词
 stopfile = cwd + "/dict/" + "stopwords.txt"
 #自定义词库
